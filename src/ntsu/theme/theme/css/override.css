@@ -1,0 +1,16 @@
+div.news-box {
+    padding-bottom:15px;
+}
+
+.date {
+    border: 0px solid #ccc;
+    box-shadow: 0 0 0px #eee inset;
+}
+
+.news-box .thumb:after {
+	background: rgba(0, 0, 0, 0.4);
+}
+
+.news-box .thumb img {
+    height: 250px;
+}

@@ -1,0 +1,29 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="ntsu.theme">
+
+  <!-- Set overrides folder for Just-a-Bunch-Of-Templates product -->
+  <include package="z3c.jbot" file="meta.zcml" />
+  <browser:jbot
+      directory="overrides"
+      layer="ntsu.theme.interfaces.INtsuThemeLayer"
+      />
+
+  <!-- Publish static files -->
+  <browser:resourceDirectory
+      name="ntsu.theme"
+      directory="static"
+      />
+
+  <!-- Browser -->
+  <browser:page
+      name="ntsu_macro"
+      for="*"
+      class=".views.NTSUMacro"
+      template="template/ntsu_macro.pt"
+      permission="zope2.View"
+      />
+
+</configure>

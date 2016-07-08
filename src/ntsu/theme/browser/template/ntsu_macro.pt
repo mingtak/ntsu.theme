@@ -1,0 +1,64 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+    xmlns:tal="http://xml.zope.org/namespaces/tal"
+    xmlns:metal="http://xml.zope.org/namespaces/metal"
+    xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+    lang="en"
+    metal:use-macro="context/main_template/macros/master"
+    i18n:domain="ntsu.content">
+<body>
+
+
+
+<!-- Header Slide -->
+  <metal:row define-macro="header_slide">
+
+<?python
+from plone import api
+portal = api.portal.get()
+?>
+
+
+  <!--Main  Slider Start-->
+  <div class="main-slider"
+       tal:define="cover_slide python:portal['resource']['cover_slide'];
+                   hero_images python:cover_slide.getChildNodes()">
+    <ul class="cp-child-slider">
+      <li tal:repeat="hero hero_images">
+        <img tal:attributes="src string:${hero/absolute_url}/@@images/image;
+                             alt context/Title"/>
+        <div class="caption">
+          <div class="container">
+            <div class="slider-data">
+              <h2 tal:content="hero/description" />
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <!--Main  Slider End--> 
+  
+
+  </metal:row>
+
+
+
+
+  <metal:row define-macro="content_title">
+    <div class="inner-title">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h2 tal:content="context/title">Gallery 4 col</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </metal:row>
+
+
+
+
+
+</body>
+</html>

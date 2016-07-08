@@ -1,0 +1,58 @@
+<div class="row footer">
+
+  <!--Footer Start-->
+  <div id="footer" class="cp-footer">
+    <div class="footer-top">  
+      <div class="container">
+        <div class="row">
+
+
+          <div class="col-md-4">
+            <div class="widget_text">
+              <img src="http://60.251.139.32:8700/ntsu/@@site-logo/top_1.jpg"/>
+            </div>
+          </div>
+
+
+          <div class="col-md-4">
+            <div class="widget_text">
+              <h3>好站報報</h3>
+<p><a target="_blank" href="https://www.gender.edu.tw/web/index.php/home">教育部性別平等教育全球資訊網</a></p>
+<p><a target="_blank" href="http://sexedu.moe.edu.tw/html/index.asp">教育部性教育教學資源網</a></p>
+<p><a target="_blank" href="http://gender.cpshs.hcc.edu.tw/bin/home.php">教育部國民及學前教育署性別平等教育資訊網</a></p>
+
+            </div>
+          </div>
+
+
+          <div class="col-md-4">
+            <div class="widget_text">
+              <h3>站內連結</h3>
+<p><a target="_blank" href="https://www.gender.edu.tw/web/index.php/home">教育部性別平等教育全球資訊網</a></p>
+<p><a target="_blank" href="http://sexedu.moe.edu.tw/html/index.asp">教育部性教育教學資源網</a></p>
+<p><a target="_blank" href="http://gender.cpshs.hcc.edu.tw/bin/home.php">教育部國民及學前教育署性別平等教育資訊網</a></p>
+
+
+
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <p>Copyright 2015. All Rights Reserved.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Footer End--> 
+  
+
+</div>

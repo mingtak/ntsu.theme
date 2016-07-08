@@ -1,0 +1,91 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="here/main_template/macros/master"
+      i18n:domain="plone">
+<body>
+
+<metal:content-core fill-slot="content-core">
+<metal:main_macro define-macro="content-core"
+    tal:define="images view/album_images;
+                albums view/album_folders">
+
+
+<?python
+from plone import api
+portal = api.portal.get()
+?>
+
+
+    <metal:macro use-macro="context/@@ntsu_macro/macros/content_title" />
+
+
+
+  <!--Main Content Start-->
+  <div class="cp-page-content">
+    <!--Home Latest News Start-->
+    <div>
+      <div class="container">
+        <div class="row">
+
+
+
+          <div>
+
+
+
+
+            <ul class="gallery-multi-col">
+
+              <li class="col-md-3 col-sm-6">
+
+                <div class="gallery-thumb">
+<img src="http://60.251.139.32:8700/ntsu/album/682157125ba35c0e77ed724752877167/1.jpg/@@images/image/large" alt="">
+                  <div class="gallery-caption">
+ <a href="http://60.251.139.32:8700/ntsu/album/682157125ba35c0e77ed724752877167/1.jpg/@@images/image/large" data-rel="prettyPhoto[gallery1]" class="hicon">
+ <i class="fa fa-search"></i></a>
+
+
+                  </div>
+
+                </div>
+
+              </li></ul>
+
+
+
+            <ul class="gallery-multi-col">
+              <li class="col-md-3 col-sm-6" tal:repeat="item context/getChildNodes">
+
+                    <a tal:attributes="href string:${item/absolute_url}/@@images/image/large"
+                       data-lightbox="image-1" data-title="My caption">
+
+                  <img tal:attributes="src string:${item/absolute_url}/@@images/image/mini;
+                                       alt item/title" style="width:100%">
+                    </a>
+              </li>
+            </ul>
+          </div>
+
+
+
+
+
+
+        </div>
+      </div>
+    </div>
+    <!--Home Latest News End-->
+  </div>
+  <!--Main Content End-->
+
+
+
+
+</metal:main_macro>
+</metal:content-core>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+    xmlns:tal="http://xml.zope.org/namespaces/tal"
+    xmlns:metal="http://xml.zope.org/namespaces/metal"
+    xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+    lang="en"
+    metal:use-macro="context/main_template/macros/master"
+    i18n:domain="ntsu.addon">
+<body>
+
+
+<metal:content-core fill-slot="content-core">
+<metal:content-core define-macro="content-core"
+                    tal:define="toc context/table_of_contents|nothing;">
+
+    <metal:macro use-macro="context/@@ntsu_macro/macros/header_slide" />
+
+
+
+  <!--Main Content Start-->
+  <div class="cp-page-content" tal:define="brain view/brain">
+    <!--Home Latest News Start-->
+    <div class="cp-home-latest-news gap-80">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h2 class="sec-title">Latest News</h2>
+          </div>
+          <div class="col-md-4" tal:repeat="item brain">
+            <div class="news-box">
+              <div class="thumb"><img tal:attributes="src string:${item/getURL}/@@images/image/preview; alt item/Title"></div>
+              <div class="news-caption">
+                <div class="date"><span tal:content="python:item.created.strftime('%d')" /> <span>/</span> <span tal:replace="python:item.created.strftime('%m')" /></div>
+                <h3><a tal:attributes="href item/getURL"><span tal:replace="item/Title"/></a></h3>
+                <p tal:content="item/Description" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Home Latest News End-->
+  </div>
+  <!--Main Content End-->
+
+
+
+
+
+</metal:content-core>
+</metal:content-core>
+
+</body>
+</html>
+
