@@ -18,7 +18,7 @@ from plone import api
 portal = api.portal.get()
 ?>
 
-
+    <metal:macro use-macro="context/@@ntsu_macro/macros/banner" />
     <metal:macro use-macro="context/@@ntsu_macro/macros/content_title" />
 
 

@@ -16,33 +16,43 @@
 from plone import api
 portal = api.portal.get()
 ?>
+    <metal:macro use-macro="context/@@ntsu_macro/macros/banner" />
 
 
   <!--Main Content Start-->
   <div class="cp-page-content">
     <!--Home Latest News Start-->
-    <div class="cp-home-latest-news gap-80">
+    <div class="cp-home-latest-news gap-25">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <h2 class="sec-title" tal:content="context/title">Latest News</h2>
+            <h2 class="pull-left" tal:content="python:u'第%s頁' % context.title.replace('.pdf', '')">Latest News</h2>
+
+
+<a class="pull-right readmore-bg"
+   tal:attributes=" href python:'%s/@@download/file/0620_性侵害防制.pdf' % portal['ebook']['0620_60274fb55bb396325236.pdf'].absolute_url()">全文下載</a>
+
+
           </div>
           <div class="col-md-12">
 
-
+<br>
 
 <div tal:define="filename context/file/filename;
-                 page python:filename.split('.')[0]">
+                 page python:filename.split('.')[0]" class="post-tags">
 
-
+<div class="tags">
   <a tal:define="previous python:int(page) - 1"
-     tal:attributes="href python:'%s/%s.pdf/@@online_reading' % (context.getParentNode().absolute_url(), previous)">Previous Page</a>
+     tal:attributes="href python:'%s/%s.pdf/@@online_reading' % (context.getParentNode().absolute_url(), previous)">
+<span aria-hidden="true"><i class="fa fa-angle-left"></i></span> 上一頁
+</a>
 
   <a tal:define="next python:int(page) + 1" class="pull-right"
-     tal:attributes="href python:'%s/%s.pdf/@@online_reading' % (context.getParentNode().absolute_url(), next)">Next Page</a>
-
+     tal:attributes="href python:'%s/%s.pdf/@@online_reading' % (context.getParentNode().absolute_url(), next)">
+下一頁 <span aria-hidden="true"><i class="fa fa-angle-right"></i></span></a>
 </div>
-
+</div>
+<hr>
 
 <iframe tal:attributes="src string:${portal/absolute_url}/ViewerJS/#${context/absolute_url}"
         width='100%' height='600' allowfullscreen webkitallowfullscreen></iframe>

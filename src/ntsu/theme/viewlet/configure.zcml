@@ -1,0 +1,19 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="ntsu.theme">
+
+  <!-- Viewlet with layer -->
+  <browser:viewlet
+    name="theme_header"
+    for="*"
+    manager="plone.app.layout.viewlets.interfaces.IAboveContent"
+    template="template/theme_header.pt"
+    class=".viewlet.ThemeHeader"
+    permission="zope2.View"
+    layer="ntsu.theme.interfaces.INtsuThemeLayer"
+    />
+
+
+</configure>

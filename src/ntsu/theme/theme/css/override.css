@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanstc.css);
+
 div.news-box {
     padding-bottom:15px;
 }
@@ -13,4 +15,201 @@ div.news-box {
 
 .news-box .thumb img {
     height: 250px;
+}
+
+.gap-25 {
+        padding: 25px 0;
+}
+
+.gap-50 {
+        padding: 50px 0;
+}
+
+.main-slider {
+    border-top: 12px solid #eea47d;
+}
+
+.banner-image img{
+    border-top: 12px solid #eea47d;
+    border-bottom: 12px solid #eea47d;
+}
+
+/* font-family */
+.fonts {
+        font-family: 'Courgette', cursive, 'Noto Sans TC';
+        font-family: 'Open Sans', sans-serif, 'Noto Sans TC';
+}
+body {
+        font-family: 'Open Sans', sans-serif, 'Noto Sans TC';
+}
+.wrapper h2.sec-title {
+        font-family: 'Courgette', cursive, 'Noto Sans TC';
+}
+.wrapper h2.sec-title2 {
+        font-family: 'Courgette', cursive, 'Noto Sans TC';
+}
+.wrapper h3.sub-title {
+        font-family: 'Courgette', cursive, 'Noto Sans TC';
+}
+.wrapper h1, .wrapper h2, .wrapper h3, .wrapper h4, .wrapper h5, .wrapper h6 {
+        font-family: 'Courgette', cursive, 'Noto Sans TC';
+}
+.login-container .cart-option p {
+        font-family: 'Courgette', cursive, 'Noto Sans TC';
+}
+.login-container .login {
+        font-family: "Courgette", cursive, 'Noto Sans TC';
+}
+.logo-nav .main-nav ul li a {
+        font-family: 'Open Sans', sans-serif, 'Noto Sans TC';
+}
+.main-slider .caption h2 {
+        font-family: "Courgette", cursive, 'Noto Sans TC';
+}
+.shopping-button, .subscribe-button {
+        font-family: 'Open Sans', sans-serif, 'Noto Sans TC';
+}
+.home-services .service-box a.readmore {
+        font-family: 'Courgette', cursive, 'Noto Sans TC';
+}
+.readmore-bg {
+        font-family: 'Courgette', cursive, 'Noto Sans TC';
+}
+.emergency-call h2 {
+        font-family: 'Courgette', cursive, 'Noto Sans TC';
+}
+.emergency-call strong {
+        font-family: 'Courgette', cursive, 'Noto Sans TC';
+}
+.caring-content p {
+        font-family: 'Courgette', cursive, 'Noto Sans TC';
+}
+.cp-caring-product .caring-content a.readmore, .cp-home-peralax a.readmore {
+        font-family: 'Courgette', cursive, 'Noto Sans TC';
+}
+.cp-caring-product .nav-tabs > li > a {
+        font-family: "Open Sans", 'Noto Sans TC';
+}
+.tab-pro-box .box-caption strong {
+        font-family: 'Courgette', cursive, 'Noto Sans TC';
+}
+.tab-pro-box .box-caption a.addtocart {
+        font-family: 'Courgette', cursive, 'Noto Sans TC';
+}
+.news-box .news-caption .date {
+        font-family: 'Courgette', cursive, 'Noto Sans TC';
+}
+.subscribe-button {
+        font-family: 'Courgette', cursive, 'Noto Sans TC';
+}
+.f-readmore {
+        font-family: 'Courgette', cursive, 'Noto Sans TC';
+}
+.pro-slider .thumb .thumb-caption .text {
+        font-family: 'Courgette', cursive, 'Noto Sans TC';
+}
+.dis-tag {
+        font-family: 'Courgette', cursive, 'Noto Sans TC';
+}
+.page404 .p404 li {
+        font-family: "Open Sans", 'Noto Sans TC';
+}
+.page404 .return {
+        font-family: 'Courgette', cursive, 'Noto Sans TC';
+}
+.page404v2 .title404 h1 sup {
+        font-family: 'Courgette', cursive, 'Noto Sans TC';
+}
+.page404v2 .title404 h1 {
+        font-family: 'Courgette', cursive, 'Noto Sans TC';
+}
+.page404v2 .title404 h1 sub {
+        font-family: "Open Sans", 'Noto Sans TC';
+}
+.links {
+        font-family: 'Courgette', cursive, 'Noto Sans TC';
+}
+.page404-content h4 {
+        font-family: 'Courgette', 'Noto Sans TC';
+}
+.page404-content .input-group input[type="submit"] {
+        font-family: 'Courgette', cursive, 'Noto Sans TC';
+}
+.event-caption .book-now {
+        font-family: 'Courgette', cursive, 'Noto Sans TC';
+}
+.events-paralx .event-date {
+        font-family: "Open Sans", 'Noto Sans TC';
+}
+.event-packages .pcontent h2 {
+        font-family: 'Open Sans', sans-serif, 'Noto Sans TC';
+}
+.pcontent strong {
+        font-family: 'Courgette', cursive, 'Noto Sans TC';
+}
+.event-packages .pcontent h3 {
+        font-family: 'Open Sans', sans-serif, 'Noto Sans TC';
+}
+.comment-form .submit {
+        font-family: 'Courgette', cursive, 'Noto Sans TC';
+}
+.product-listing .pro-list .text .pro-name h4, .product-listing .pro-list .text .pro-name p {
+        font-family: "Courgette", cursive, 'Noto Sans TC';
+}
+.saletag {
+        font-family: 'Courgette', cursive, 'Noto Sans TC';
+}
+.table-caps {
+        font-family: 'Courgette', cursive, 'Noto Sans TC';
+}
+.cart-steps .btn-style {
+        font-family: 'Courgette', cursive, 'Noto Sans TC';
+}
+.happy-customers p {
+        font-family: "Open Sans", 'Noto Sans TC';
+}
+.cp-about-timetable .days strong {
+        font-family: 'Courgette', cursive, 'Noto Sans TC';
+}
+.our-timeline .content-box a.readmore {
+        font-family: 'Courgette', cursive, 'Noto Sans TC';
+}
+.readmore-blue {
+        font-family: 'Courgette', cursive, 'Noto Sans TC';
+}
+.post-tools .post-date {
+        font-family: 'Courgette', cursive, 'Noto Sans TC';
+}
+.post-thumb .post-date {
+        font-family: 'Courgette', cursive, 'Noto Sans TC';
+}
+.side-banner .text {
+        font-family: 'Courgette', cursive, 'Noto Sans TC';
+}
+.blog-archives .date {
+        font-family: 'Open Sans', cursive, 'Noto Sans TC';
+}
+.our-team .team-box small {
+        font-family: 'Courgette', cursive, 'Noto Sans TC';
+}
+.contact-form label {
+        font-family: "Open Sans", 'Noto Sans TC';
+}
+.opening-hours li {
+        font-family: 'Courgette', cursive, 'Noto Sans TC';
+}
+.cinfo li {
+        font-family: 'Courgette', cursive, 'Noto Sans TC';
+}
+.welcome-content strong {
+        font-family: "Open Sans", 'Noto Sans TC';
+}
+.box-content h6 {
+        font-family: "open Sans", 'Noto Sans TC';
+}
+.testimonials-main p {
+        font-family: 'Courgette', cursive, 'Noto Sans TC';
+}
+.staff-content > p {
+        font-family: "Courgette", cursive, 'Noto Sans TC';
 }

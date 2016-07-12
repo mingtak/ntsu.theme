@@ -19,11 +19,11 @@
   <!--Main Content Start-->
   <div class="cp-page-content" tal:define="brain view/brain">
     <!--Home Latest News Start-->
-    <div class="cp-home-latest-news gap-80">
+    <div class="cp-home-latest-news gap-50">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <h2 class="sec-title">Latest News</h2>
+            <h2 class="sec-title">活動資訊</h2>
           </div>
           <div class="col-md-4" tal:repeat="item brain">
             <div class="news-box">

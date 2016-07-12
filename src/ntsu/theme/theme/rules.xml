@@ -135,6 +135,12 @@
       css:theme-children="div#footer"
       />
 
+    <!-- cp-child-topbar -->
+    <replace
+      css:content=".cp-child-topbar"
+      css:theme=".cp-child-topbar"
+      />
+
     <!-- Drop -->
     <drop css:theme="div.main-slider" />
     <drop css:theme="div.cp-page-content" />

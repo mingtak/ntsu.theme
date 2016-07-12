@@ -1,0 +1,11 @@
+<div class="cp-child-topbar">
+      <div class="container"> 
+        <!--SELECT LANGUAGE START-->
+        <div class="cart-menu">
+          <ul>
+            <li><a href="#">全文下載</a></li>
+            <li><a href="#">好康活動</a></li>
+          </ul>
+        </div>
+      </div>
+</div>

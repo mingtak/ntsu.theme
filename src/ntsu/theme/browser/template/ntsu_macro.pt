@@ -56,7 +56,22 @@ portal = api.portal.get()
     </div>
   </metal:row>
 
+  <metal:row define-macro="banner">
 
+<?python
+from plone import api
+portal = api.portal.get()
+?>
+
+
+  <div tal:define="banner python:portal['resource']['images']['banner']" class="banner-image">
+        <img tal:attributes="src string:${banner/absolute_url}/@@images/image;
+                             alt context/Title"
+             style="width:100%"/>
+  </div>
+
+
+  </metal:row>
 
 
 
