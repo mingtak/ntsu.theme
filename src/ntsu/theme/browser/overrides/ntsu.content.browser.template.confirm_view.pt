@@ -27,6 +27,6 @@ portal = api.portal.get()
        class="btn btn-info answer">下一題</a>
 
     <a tal:condition="not:view/next"
-       tal:attributes="href python:'#'"
+       tal:attributes="href string:${portal/absolute_url}/@@see_result"
        class="btn btn-info answer">觀看結果</a>
 

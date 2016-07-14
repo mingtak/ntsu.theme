@@ -1,0 +1,146 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+    xmlns:tal="http://xml.zope.org/namespaces/tal"
+    xmlns:metal="http://xml.zope.org/namespaces/metal"
+    xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+    lang="en"
+    metal:use-macro="context/main_template/macros/master"
+    i18n:domain="ntsu.content">
+<body>
+
+
+<metal:content-core fill-slot="content-core">
+<metal:content-core define-macro="content-core"
+                    tal:define="toc context/table_of_contents|nothing;">
+
+<?python
+from plone import api
+portal = api.portal.get()
+?>
+
+    <metal:macro use-macro="context/@@ntsu_macro/macros/banner" />
+  <!--Main Content Start-->
+  <div class="cp-page-content">
+    <!--Home Latest News Start-->
+    <div class="cp-home-latest-news gap-25">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3" />
+            <div class="col-md-6" tal:switch="view/amount">
+
+              <tal:case case="python:100">
+                <h2>好棒啊，你的得分是：<span tal:content="view/amount" style="color:red; font-size:2em" /></h2>
+                <h3>請填寫以下資料，可以進行抽獎哦</h3>
+
+
+
+<form tal:attributes="action string:${portal/absolute_url}/@@thanks" method="post">
+            <div class="contact-form">
+              <ul>
+                <li class="input-group">
+                  <input name="姓名" id="name" type="text" class="form-control" placeholder="姓名" required>
+                </li>
+                <li class="input-group">
+                  <label>性別</label>
+<select name="性別" id="sex">
+  <option value="男">男生</option>
+  <option value="女">女生</option>
+</select>
+
+                </li>
+                <li class="input-group">
+                  <input name="年齡" id="age" type="number" min="1" max="100" class="form-control" placeholder="年齡" required>
+                </li>
+                <li class="input-group">
+                  <input name="email" id="email" type="email" class="form-control" placeholder="Email" required>
+                </li>
+                <li class="input-group">
+                  <input name="地址" id="addr" type="text" class="form-control" placeholder="地址" required>
+                </li>
+                <li class="input-group">
+                  <input name="學校名稱" id="school_name" type="text" class="form-control" placeholder="就讀學校" required>
+                </li>
+
+                <li class="input-group">
+
+<label>學校所在地</label>
+<select name="學校所在地" id="dist">
+  <option value="北部">北部(基隆市/臺北市/新北市/桃園市/新竹縣市)</option>
+  <option value="中部">中部(苗栗縣/臺中市/彰化縣/南投縣/雲林縣)</option>
+  <option value="南部">南部(嘉義縣市/臺南市/高雄市/屏東縣)</option>
+  <option value="東部">東部(宜蘭縣/花蓮縣/臺東縣)</option>
+  <option value="外島">外島(澎湖縣/金門縣/連江縣)</option>
+</select>
+                </li>
+                <li class="input-group">
+<label>本計畫最吸引你的地方</label>
+<select name="本計畫最吸引你的地方" id="keepme">
+  <option value="校園宣傳活動">校園宣傳活動</option>
+  <option value="動畫">動畫</option>
+  <option value="短片">宣導短片</option>
+  <option value="電子書">電子書</option>
+  <option value="好康活動">好康活動</option>
+</select>
+
+
+                </li>
+                <li class="input-group">
+                  <label>本計畫執行內容是否讓你更加了解到從事體育活動時「保護自己、尊重他人」的重要性？</label>
+<select name="本計畫執行內容是否讓你更加了解到從事體育活動時「保護自己、尊重他人」的重要性？" id="known">
+  <option value="是">是</option>
+  <option value="否">否</option>
+</select>
+
+                </li>
+                <li class="input-group">
+                  <label>校園內，若有類似性騷擾事件發生，你的第一個求助管道會是？</label>
+<select name="校園內，若有類似性騷擾事件發生，你的第一個求助管道會是？" id="help">
+  <option value="學務處">學務處</option>
+  <option value="班級導師">班級導師</option>
+  <option value="教練">教練</option>
+  <option value="同學">同學</option>
+  <option value="家人">家人</option>
+  <option value="選擇隱忍">選擇隱忍</option>
+</select>
+
+
+                </li>
+                <li class="input-group">
+                  <label>如果未來有相關宣導活動，是否有意願參與？</label>
+<select name="如果未來有相關宣導活動，是否有意願參與？" id="if">
+  <option value="是">是</option>
+  <option value="否">否</option>
+</select>
+
+                </li>
+                <li>
+                  <input class="readmore-blue" type="submit" value="確認送出" style="float:right">
+                </li>
+              </ul>
+            </div>
+</form>
+
+              </tal:case>
+
+              <tal:case case="default">
+                <h2>噢，還要再努力哦，你的得分是：<span tal:content="view/amount" style="color:red; font-size:2em" /></h2>
+                <a tal:attributes="href python:portal['event'].absolute_url()"
+                   class="btn btn-info answer">加油, 再次挑戰 !!</a>
+              </tal:case>
+
+            </div>
+          <div class="col-md-3" />
+        </div>
+      </div>
+    </div>
+    <!--Home Latest News End-->
+  </div>
+  <!--Main Content End-->
+
+
+
+
+</metal:content-core>
+</metal:content-core>
+
+</body>
+</html>

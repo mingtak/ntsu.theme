@@ -61,10 +61,21 @@ li.question:before {
 }
 
 .answer {
-display:block;
-margin:20px;
-padding:10px;
-font-size:25px;
+    display:block;
+    margin:20px;
+    padding:10px;
+    font-size:25px;
+}
+
+.input-group .form-control {
+    background-color:#ddd;
+    width:100%;
+    color:#0ac;
+}
+
+select {
+    width:100%;
+    padding:10px 15px;
 }
 
 /* font-family */

@@ -1,0 +1,54 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+    xmlns:tal="http://xml.zope.org/namespaces/tal"
+    xmlns:metal="http://xml.zope.org/namespaces/metal"
+    xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+    lang="en"
+    metal:use-macro="context/main_template/macros/master"
+    i18n:domain="ntsu.content">
+<body>
+
+
+<metal:content-core fill-slot="content-core">
+<metal:content-core define-macro="content-core"
+                    tal:define="toc context/table_of_contents|nothing;">
+
+<?python
+from plone import api
+import json
+portal = api.portal.get()
+?>
+
+    <metal:macro use-macro="context/@@ntsu_macro/macros/banner" />
+  <!--Main Content Start-->
+  <div class="cp-page-content">
+    <!--Home Latest News Start-->
+    <div class="cp-home-latest-news gap-25">
+      <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+
+<div tal:repeat="item context/players">
+  <tal:json define="data python:json.loads(item)"
+            repeat="key data">
+    <p><strong tal:content="key"> : <span tal:replace="python:data[key]" /></p>
+  </tal:json>
+  <hr>
+</div>
+
+
+            </div>
+        </div>
+      </div>
+    </div>
+    <!--Home Latest News End-->
+  </div>
+  <!--Main Content End-->
+
+
+
+
+</metal:content-core>
+</metal:content-core>
+
+</body>
+</html>
