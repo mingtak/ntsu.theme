@@ -141,6 +141,12 @@
       css:theme=".cp-child-topbar"
       />
 
+    <!-- below body js -->
+    <after
+      css:content="#below_body_js"
+      css:theme-children="body"
+      />
+
     <!-- Drop -->
     <drop css:theme="div.main-slider" />
     <drop css:theme="div.cp-page-content" />

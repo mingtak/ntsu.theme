@@ -12,44 +12,35 @@
 <metal:content-core define-macro="content-core"
                     tal:define="toc context/table_of_contents|nothing;">
 
-<?python
-from plone import api
-portal = api.portal.get()
-?>
-
     <metal:macro use-macro="context/@@ntsu_macro/macros/banner" />
+    <metal:macro use-macro="context/@@ntsu_macro/macros/content_title" />
+
   <!--Main Content Start-->
   <div class="cp-page-content">
     <!--Home Latest News Start-->
     <div class="cp-home-latest-news gap-25">
       <div class="container">
         <div class="row">
+          <div class="col-md-12">
 
-<div class="col-md-2" />
-          <div class="col-md-8">
-
-<li class="question" tal:content="context/title" />
-
-
+<div tal:repeat="item view/docs">
+<h4 tal:content="item/title"/>
+<p tal:replace="structure item/text/raw" />
 <hr>
-<h3>請選擇: </h3>
-<a tal:repeat="item context/answer"
-   tal:content="item"
-   tal:attributes="href string:${portal/absolute_url}/@@confirm?ans=${item}&id=${context/id}"
-   class="btn btn-info answer ajax cboxElement">
-
+</div>
 
 
           </div>
-<div class="col-md-2" />
-
-
         </div>
       </div>
     </div>
     <!--Home Latest News End-->
   </div>
   <!--Main Content End-->
+
+
+
+
 
 
 

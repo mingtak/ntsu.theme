@@ -16,8 +16,10 @@
 from plone import api
 portal = api.portal.get()
 ?>
-    <metal:macro use-macro="context/@@ntsu_macro/macros/banner" />
 
+
+    <metal:macro use-macro="context/@@ntsu_macro/macros/banner" />
+    <metal:macro use-macro="context/@@ntsu_macro/macros/content_title" />
 
   <!--Main Content Start-->
   <div class="cp-page-content">
@@ -26,37 +28,88 @@ portal = api.portal.get()
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <h2 class="pull-left" tal:content="python:u'第%s頁' % context.title.replace('.pdf', '')">Latest News</h2>
 
 
+<!--
 <a class="pull-right readmore-bg"
    tal:attributes=" href python:'%s/@@download/file/0620_性侵害防制.pdf' % portal['ebook']['0620_60274fb55bb396325236.pdf'].absolute_url()">全文下載</a>
-
+-->
 
           </div>
           <div class="col-md-12">
 
-<br>
+<div class="thumbnails">
+        <div>
+                <ul>
+                        <li class="i">
+                                <img src="ebook/book-1.png/@@images/image/mini" width="76" height="100" class="page-1">
+                                <span>封面</span>
+                        </li>
+                        <li class="i">
+                                <img src="ebook/book-4.png/@@images/image/mini" width="76" height="100" class="page-4">
+                                <span>壹</span>
+                        </li>
+                        <li class="i">
+                                <img src="ebook/book-6.png/@@images/image/mini" width="76" height="100" class="page-6">
+                                <span>貳</span>
+                        </li>
+                        <li class="i">
+                                <img src="ebook/book-8.png/@@images/image/mini" width="76" height="100" class="page-8">
+                                <span>參</span>
+                        </li>
+                        <li class="i">
+                                <img src="ebook/book-22.png/@@images/image/mini" width="76" height="100" class="page-22">
+                                <span>肆</span>
+                        </li>
+                        <li class="i">
+                                <img src="ebook/book-34.png/@@images/image/mini" width="76" height="100" class="page-34">
+                                <span>伍</span>
+                        </li>
+                        <li class="i">
+                                <img src="ebook/book-64.png/@@images/image/mini" width="76" height="100" class="page-64">
+                                <span>陸</span>
+                        </li>
+                        <li class="i">
+                                <img src="ebook/book-85.png/@@images/image/mini" width="76" height="100" class="page-85">
+                                <span>柒</span>
+                        </li>
+                        <li class="i">
+                                <img src="ebook/book-96.png/@@images/image/mini" width="76" height="100" class="page-96">
+                                <span>捌</span>
+                        </li>
+                        <li class="i">
+                                <img src="ebook/book-104.png/@@images/image/mini" width="76" height="100" class="page-104">
+                                <span>封底</span>
+                        </li>
 
-<div tal:define="filename context/file/filename;
-                 page python:filename.split('.')[0]" class="post-tags">
 
-<div class="tags">
-  <a tal:define="previous python:int(page) - 1"
-     tal:attributes="href python:'%s/%s.pdf/@@online_reading' % (context.getParentNode().absolute_url(), previous)">
-<span aria-hidden="true"><i class="fa fa-angle-left"></i></span> 上一頁
-</a>
-
-  <a tal:define="next python:int(page) + 1" class="pull-right"
-     tal:attributes="href python:'%s/%s.pdf/@@online_reading' % (context.getParentNode().absolute_url(), next)">
-下一頁 <span aria-hidden="true"><i class="fa fa-angle-right"></i></span></a>
+                <ul>
+        </div>
 </div>
+
+
+
+<div id="canvas">
+<!--
+<div class="zoom-icon zoom-icon-in"></div>
+-->
+
+
+<div class="magazine-viewport">
+        <div class="container">
+                <div class="magazine">
+                        <!-- Next button -->
+                        <div ignore="1" class="next-button"></div>
+                        <!-- Previous button -->
+                        <div ignore="1" class="previous-button"></div>
+                </div>
+        </div>
 </div>
-<hr>
 
-<iframe tal:attributes="src string:${portal/absolute_url}/ViewerJS/#${context/absolute_url}"
-        width='100%' height='600' allowfullscreen webkitallowfullscreen></iframe>
+</div>
 
+<a class="pull-right readmore-bg"
+   tal:attributes=" href python:'%s/@@download/file/0620_性侵害防制.pdf' % portal['ebook']['0620_60274fb55bb396325236.pdf'].absolute_url()">全文下載</a>
 
           </div>
         </div>

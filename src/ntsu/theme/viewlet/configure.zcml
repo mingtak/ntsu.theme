@@ -16,4 +16,15 @@
     />
 
 
+  <browser:viewlet
+    name="below_body_js"
+    for="*"
+    manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+    template="template/below_body_js.pt"
+    class=".viewlet.BelowBodyJs"
+    permission="zope2.View"
+    layer="ntsu.theme.interfaces.INtsuThemeLayer"
+    />
+
+
 </configure>

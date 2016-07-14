@@ -1,3 +1,8 @@
+<?python
+from plone import api
+portal = api.portal.get()
+?>
+
 <div class="row footer">
 
   <!--Footer Start-->
@@ -9,7 +14,16 @@
 
           <div class="col-md-4">
             <div class="widget_text">
-              <img src="http://60.251.139.32:8700/ntsu/@@site-logo/top_1.jpg"/>
+              <p>
+                 <a href="http://www.edu.tw/" target="_blank">
+                   <img tal:attributes="src python:portal['resource']['images']['moe_logo_w_s.png'].absolute_url()"/>
+                 </a>
+              </p>
+              <p>
+                 <a tal:attributes="href portal/absolute_url">
+                   <img tal:attributes="src python:portal['resource']['images']['ntsu_logo_blue.png'].absolute_url()"/>
+                 </a>
+              </p>
             </div>
           </div>
 
@@ -28,9 +42,11 @@
           <div class="col-md-4">
             <div class="widget_text">
               <h3>站內連結</h3>
-<p><a target="_blank" href="https://www.gender.edu.tw/web/index.php/home">教育部性別平等教育全球資訊網</a></p>
-<p><a target="_blank" href="http://sexedu.moe.edu.tw/html/index.asp">教育部性教育教學資源網</a></p>
-<p><a target="_blank" href="http://gender.cpshs.hcc.edu.tw/bin/home.php">教育部國民及學前教育署性別平等教育資訊網</a></p>
+
+<p><a tal:attributes="href python:'%s/ebook' % portal.absolute_url()">電子書閱讀 / 下載</a></p>
+<p><a tal:attributes="href python:'%s/media' % portal.absolute_url()">影音 / 動畫專區</a></p>
+<p><a tal:attributes="href python:'%s/album' % portal.absolute_url()">校園活動花絮</a></p>
+<p><a tal:attributes="href python:'%s/event' % portal.absolute_url()">好康活動獎不完！</a></p>
 
 
 
@@ -46,7 +62,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-6">
-            <p>Copyright 2015. All Rights Reserved.</p>
+            <p>Copyright 2016. All Rights Reserved.</p>
           </div>
         </div>
       </div>

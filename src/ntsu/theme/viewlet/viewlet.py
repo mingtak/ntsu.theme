@@ -8,3 +8,5 @@ class ThemeHeader(base.ViewletBase):
     """  """
 
 
+class BelowBodyJs(base.ViewletBase):
+    """  """

@@ -34,6 +34,39 @@ div.news-box {
     border-bottom: 12px solid #eea47d;
 }
 
+#footer .footer-top {
+    padding: 50px 0 30px 0;
+}
+
+.main-slider .caption {
+    top: 20%;
+}
+
+.slider-data {
+    text-align: right;
+}
+
+li.question {
+    list-style:none;
+    font-size:28px;
+    padding:0 0 0 20px;
+}
+
+li.question:before {
+    content:'Q: ';
+    font-family:'Courgette', cursive, 'Noto Sans TC';
+    color:red;
+    position: absolute;
+    left:0px;
+}
+
+.answer {
+display:block;
+margin:20px;
+padding:10px;
+font-size:25px;
+}
+
 /* font-family */
 .fonts {
         font-family: 'Courgette', cursive, 'Noto Sans TC';

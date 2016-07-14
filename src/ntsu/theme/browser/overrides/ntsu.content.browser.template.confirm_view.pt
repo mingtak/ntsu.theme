@@ -1,0 +1,32 @@
+<?python
+from plone import api
+portal = api.portal.get()
+?>
+
+<div tal:switch="view/result">
+  <div tal:case="True">
+    <img tal:attributes="src string:${portal/absolute_url}/resource/images/right.png/@@images/image/mini"/>
+    <h3>好棒啊，答對了！</h3>
+  </div>
+
+  <div tal:case="False">
+    <img tal:attributes="src string:${portal/absolute_url}/resource/images/wrong.png/@@images/image/mini"/>
+    <h4>噢哦，好可惜！正解： <strong tal:content="python:view.item.getObject().correctAns" /> </h4>
+  </div>
+
+  <div tal:case="string:repeated">
+    <img tal:attributes="src string:${portal/absolute_url}/resource/images/wrong.png/@@images/image/mini"/>
+    <h4>嗯…你重複作答囉！</h4>
+  </div>
+
+
+</div>
+
+    <a tal:condition="view/next"
+       tal:attributes="href python:'%s/%s' % (portal['event']['question'].absolute_url(), view.next)"
+       class="btn btn-info answer">下一題</a>
+
+    <a tal:condition="not:view/next"
+       tal:attributes="href python:'#'"
+       class="btn btn-info answer">觀看結果</a>
+
