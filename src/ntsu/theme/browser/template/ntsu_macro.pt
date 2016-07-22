@@ -26,9 +26,9 @@ portal = api.portal.get()
       <li tal:repeat="hero hero_images">
         <img tal:attributes="src string:${hero/absolute_url}/@@images/image;
                              alt context/Title"/>
-        <div class="caption">
+        <div tal:attributes="class string:caption slide_${repeat/hero/number}">
           <div class="container">
-            <div class="slider-data">
+            <div tal:attributes="class string:slider-data slide_${repeat/hero/number}">
               <h2 tal:content="hero/description" />
             </div>
           </div>

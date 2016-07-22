@@ -91,7 +91,7 @@ function loadApp() {
 
 			// The number of pages, 定頁全書頁數
 
-			pages: 104,
+			pages: 105,
 
 			// Events
 

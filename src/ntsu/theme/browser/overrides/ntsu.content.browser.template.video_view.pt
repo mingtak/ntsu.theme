@@ -18,19 +18,26 @@
   <!--Main Content Start-->
   <div class="cp-page-content">
     <!--Home Latest News Start-->
-    <div class="cp-home-latest-news gap-25">
+    <div class="cp-home-latest-news gap-25 inner-page-content cp-home-events">
       <div class="container">
         <div class="row">
-          <div class="col-md-12">
-
-<div tal:repeat="item view/docs">
-<h4 tal:content="item/title"/>
-<p tal:replace="structure item/text/raw" />
-<hr>
-</div>
 
 
-          </div>
+          <ul class="home-events">
+            <li class="col-md-4 col-sm-6" tal:repeat="item view/docs">
+              <div class="event-thumb">
+                <img tal:attributes="src string:${item/absolute_url}/@@images/image/preview;
+                                     alt item/title">
+                <div class="event-caption">
+                  <h3 tal:content="item/title">Book Your Event</h3><br/><br/>
+                  <p tal:content="item/description" style="font-size:1.5em"></p>
+                  <a class="youtube cboxElement book-now"
+                     tal:attributes="href item/text/raw;
+                                     alt item/title; title item/description">觀看影片</a> </div>
+              </div>
+            </li>
+          </ul>
+
         </div>
       </div>
     </div>

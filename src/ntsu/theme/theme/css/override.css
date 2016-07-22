@@ -38,12 +38,25 @@ div.news-box {
     padding: 50px 0 30px 0;
 }
 
-.main-slider .caption {
+.main-slider .caption.slide_2 {
+    top: 85%;
+}
+
+.main-slider .caption.slide_3 {
     top: 20%;
 }
 
 .slider-data {
     text-align: right;
+}
+
+.slider-data.slide_3 {
+    text-align: left;
+    width: 80%;
+}
+
+.slider-data.slide_3 h2 {
+    color: #ac9;
 }
 
 li.question {
