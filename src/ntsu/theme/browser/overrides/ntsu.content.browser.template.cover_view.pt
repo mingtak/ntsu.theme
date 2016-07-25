@@ -74,12 +74,16 @@ portal = api.portal.get()
             <li class="col-md-4 col-sm-6" tal:repeat="item python:portal['media'].getChildNodes()">
               <div class="event-thumb">
                 <img tal:attributes="src string:${item/absolute_url}/@@images/image/preview;
-                                     alt item/title">
+                                       alt item/title">
                 <div class="event-caption">
-                  <h3 tal:content="item/title">Book Your Event</h3><br/><br/>
+                  <a class="youtube cboxElement"
+                     tal:attributes="href string:${item/text/raw}?autoplay=1;
+                                     alt item/title; title item/description">
+                    <h3 tal:content="item/title">Book Your Event</h3>
+                  </a><br/><br/>
                   <p tal:content="item/description" style="font-size:1.5em"></p>
                   <a class="youtube cboxElement book-now"
-                     tal:attributes="href item/text/raw;
+                     tal:attributes="href string:${item/text/raw}?autoplay=1;
                                      alt item/title; title item/description">觀看影片</a> </div>
               </div>
             </li>

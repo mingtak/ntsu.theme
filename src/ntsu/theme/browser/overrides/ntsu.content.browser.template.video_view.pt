@@ -29,7 +29,11 @@
                 <img tal:attributes="src string:${item/absolute_url}/@@images/image/preview;
                                      alt item/title">
                 <div class="event-caption">
-                  <h3 tal:content="item/title">Book Your Event</h3><br/><br/>
+                  <a class="youtube cboxElement"
+                     tal:attributes="href string:${item/text/raw}?autoplay=1;
+                                     alt item/title; title item/description">
+                    <h3 tal:content="item/title">Book Your Event</h3>
+                  </a><br/><br/>
                   <p tal:content="item/description" style="font-size:1.5em"></p>
                   <a class="youtube cboxElement book-now"
                      tal:attributes="href string:${item/text/raw}?autoplay=1;
