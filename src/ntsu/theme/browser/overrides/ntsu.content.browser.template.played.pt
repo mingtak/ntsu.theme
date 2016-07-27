@@ -17,23 +17,29 @@ from plone import api
 portal = api.portal.get()
 ?>
 
-    <metal:macro use-macro="context/@@ntsu_macro/macros/banner" />
   <!--Main Content Start-->
   <div class="cp-page-content">
     <!--Home Latest News Start-->
     <div class="cp-home-latest-news gap-25">
       <div class="container">
         <div class="row">
-          <div class="col-md-3" />
-            <div class="col-md-6">
+            <div class="col-md-12">
 
 
+<meta http-equiv="refresh" content="5;url=http://event.ntsu.edu.tw">
+  <!--Main Content Start-->
+          <div class="page404">
+            <ul class="p404">
+              <li class="zero already"></li>
+            </ul>
+            <h3>“您已經完成本活動囉，您的資料已存在系統中，無法重複登錄”</h3>
+            <div class="return">稍候將自動回到首頁</div>
+          </div>
+  <!--Main Content End--> 
 
-你玩過了
 
 
             </div>
-          <div class="col-md-3" />
         </div>
       </div>
     </div>

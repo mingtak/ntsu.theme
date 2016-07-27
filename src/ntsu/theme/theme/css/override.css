@@ -1,5 +1,13 @@
 @import url(http://fonts.googleapis.com/earlyaccess/notosanstc.css);
 
+.page404 .p404 li.zero.thanks {
+    background: url("http://event.ntsu.edu.tw/resource/images/right.png/@@images/image/mini") no-repeat center 15px #aaa;
+}
+
+.page404 .p404 li.zero.already {
+    background: url("http://event.ntsu.edu.tw/resource/images/wrong.png/@@images/image/mini") no-repeat center 15px #aaa;
+}
+
 div.news-box {
     padding-bottom:15px;
 }
@@ -101,6 +109,10 @@ thead tr {
 
 tr.odd {
     background-color:#ddd;
+}
+
+.page404 {
+    padding: 25px 0;
 }
 
 /* font-family */
