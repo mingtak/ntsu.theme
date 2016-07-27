@@ -23,7 +23,7 @@ portal = api.portal.get()
   <!--Main Content Start-->
   <div class="cp-page-content">
     <!--Home Latest News Start-->
-    <div class="cp-home-latest-news gap-25">
+    <div class="cp-home-latest-news gap-50">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
