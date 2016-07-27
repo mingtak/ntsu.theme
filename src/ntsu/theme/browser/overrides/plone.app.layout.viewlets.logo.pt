@@ -1,0 +1,11 @@
+<a id="portal-logo"
+   title="Home"
+   target="_blank"
+   tal:attributes="href string:http://www.sa.gov.tw/wSite/mp?mp=11;
+                   title view/navigation_root_title"
+   i18n:domain="plone"
+   i18n:attributes="title">
+    <img src="logo.png" alt=""
+         tal:attributes="alt view/logo_title;
+                         title view/logo_title;
+                         src view/img_src" /></a>

@@ -46,7 +46,7 @@
 
     <!-- LOGO -->
     <copy
-      attributes="href"
+      attributes="href target"
       css:content="#portal-logo"
       css:theme="a.logo"
       />

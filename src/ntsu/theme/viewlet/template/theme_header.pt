@@ -1,10 +1,21 @@
+<?python
+from plone import api
+portal = api.portal.get()
+?>
+
 <div class="cp-child-topbar">
       <div class="container"> 
         <!--SELECT LANGUAGE START-->
         <div class="cart-menu">
           <ul>
-            <li><a href="#">全文下載</a></li>
-            <li><a href="#">好康活動</a></li>
+            <li><a tal:attributes="href python:'%s/@@download/file/%s' %
+                                               (portal['ebook']['0620_60274fb55bb396325236.pdf'].absolute_url(),
+                                               portal['ebook']['0620_60274fb55bb396325236.pdf'].file.filename)">全文下載</a></li>
+            <li><a tal:attributes="href python:'%s/@@download/file/%s' %
+                                               (portal['ebook']['ppt_file.pdf'].absolute_url(),
+                                               portal['ebook']['ppt_file.pdf'].file.filename)">投影片下載</a></li>
+            <li><a tal:attributes="href string:${portal/absolute_url}/event">好康活動</a></li>
+            <li><a href="#">Facebook</a></li>
           </ul>
         </div>
       </div>
