@@ -95,6 +95,14 @@ h2.tileHeadline {
     font-size:20px;
 }
 
+thead tr {
+    background-color:#1ef;
+}
+
+tr.odd {
+    background-color:#ddd;
+}
+
 /* font-family */
 .fonts {
         font-family: 'Courgette', cursive, 'Noto Sans TC';

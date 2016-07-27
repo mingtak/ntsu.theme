@@ -14,7 +14,6 @@
 
 <?python
 from plone import api
-import json
 portal = api.portal.get()
 ?>
 
@@ -25,33 +24,16 @@ portal = api.portal.get()
     <div class="cp-home-latest-news gap-25">
       <div class="container">
         <div class="row">
-            <div class="col-md-12">
+          <div class="col-md-3" />
+            <div class="col-md-6">
 
-<table class="table">
-<thead>
-  <tr tal:define="item python:context.players[0]">
-    <tal:json define="data python:json.loads(item)"
-              repeat="key python:sorted(data.iterkeys())">
-      <td tal:condition="python:key not in ['g-recaptcha-response', '_authenticator']" style="width:5%;">
-        <p><strong tal:content="key" /></p>
-      </td>
-    </tal:json>
-  </tr>
-</thead>
-<tbody>
-  <tr tal:repeat="item context/players"
-      tal:attributes="class python:'odd' if repeat['item'].even else 'even'">
-    <tal:json define="data python:json.loads(item)"
-              repeat="key python:sorted(data.iterkeys())">
-      <td tal:condition="python:key not in ['g-recaptcha-response', '_authenticator']" style="width:5%;">
-        <p><span tal:replace="python:data[key]" /></p>
-      </td>
-    </tal:json>
-  </tr>
-</tbody>
-</table>
+
+
+你玩過了
+
 
             </div>
+          <div class="col-md-3" />
         </div>
       </div>
     </div>

@@ -4,18 +4,18 @@ portal = api.portal.get()
 ?>
 
 <div tal:switch="view/result">
-  <div tal:case="True">
-    <img tal:attributes="src string:${portal/absolute_url}/resource/images/right.png/@@images/image/mini"/>
+  <div tal:case="True" style="padding:5% 5% 2% 5%;">
+    <img tal:attributes="src string:${portal/absolute_url}/resource/images/right.png/@@images/image/mini" style="display:block; margin:auto;"/>
     <h3>好棒啊，答對了！</h3>
   </div>
 
-  <div tal:case="False">
-    <img tal:attributes="src string:${portal/absolute_url}/resource/images/wrong.png/@@images/image/mini"/>
+  <div tal:case="False" style="padding:5% 5% 2% 5%;">
+    <img tal:attributes="src string:${portal/absolute_url}/resource/images/wrong.png/@@images/image/mini" style="display:block; margin:auto;"/>
     <h4>噢哦，好可惜！正解： <strong tal:content="python:view.item.getObject().correctAns" /> </h4>
   </div>
 
-  <div tal:case="string:repeated">
-    <img tal:attributes="src string:${portal/absolute_url}/resource/images/wrong.png/@@images/image/mini"/>
+  <div tal:case="string:repeated" style="padding:5% 5% 2% 5%;">
+    <img tal:attributes="src string:${portal/absolute_url}/resource/images/wrong.png/@@images/image/mini" style="display:block; margin:auto;"/>
     <h4>嗯…你重複作答囉！</h4>
   </div>
 
