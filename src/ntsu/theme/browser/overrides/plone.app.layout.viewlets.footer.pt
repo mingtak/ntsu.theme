@@ -64,7 +64,7 @@ portal = api.portal.get()
           <div class="col-md-1" />
             <div class="col-md-10">
               <p class="pull-left">教育部體育署 2016 © 版權所有(所有圖資未經本署同意不得轉載及重製)</p>
-              <p class="pull-right">訪客人數:<span tal:replace="python:portal['resource']['counter'].title"/></p>
+              <p class="pull-right">訪客人數 : <span tal:replace="python:portal['resource']['counter'].title"/></p>
             </div>
           <div class="col-md-1" />
         </div>
