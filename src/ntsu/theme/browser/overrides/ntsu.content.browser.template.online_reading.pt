@@ -17,7 +17,6 @@ from plone import api
 portal = api.portal.get()
 ?>
 
-
     <metal:macro use-macro="context/@@ntsu_macro/macros/banner" />
     <metal:macro use-macro="context/@@ntsu_macro/macros/content_title" />
 
@@ -29,11 +28,6 @@ portal = api.portal.get()
         <div class="row">
           <div class="col-md-12">
 
-
-<!--
-<a class="pull-right readmore-bg"
-   tal:attributes=" href python:'%s/@@download/file/0620_性侵害防制.pdf' % portal['ebook']['0620_60274fb55bb396325236.pdf'].absolute_url()">全文下載</a>
--->
 
           </div>
           <div class="col-md-12">
@@ -109,7 +103,9 @@ portal = api.portal.get()
 </div>
 
 <a class="pull-right readmore-bg"
-   tal:attributes=" href python:'%s/@@download/file/0620_性侵害防制.pdf' % portal['ebook']['0620_60274fb55bb396325236.pdf'].absolute_url()">全文下載</a>
+   tal:attributes="href python:'%s/@@download/file/%s' %
+                                (portal['ebook']['0620_60274fb55bb396325236.pdf'].absolute_url(),
+                                 portal['ebook']['0620_60274fb55bb396325236.pdf'].file.filename)">全文下載</a>
 
           </div>
         </div>
