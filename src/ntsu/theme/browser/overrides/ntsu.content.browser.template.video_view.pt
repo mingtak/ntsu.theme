@@ -13,7 +13,7 @@
                     tal:define="toc context/table_of_contents|nothing;">
 
     <metal:macro use-macro="context/@@ntsu_macro/macros/banner" />
-    <metal:macro use-macro="context/@@ntsu_macro/macros/content_title" />
+<!--    <metal:macro use-macro="context/@@ntsu_macro/macros/content_title" /> -->
 
   <!--Main Content Start-->
   <div class="cp-page-content">
@@ -23,8 +23,13 @@
         <div class="row">
 
 
+
+<h2>校園宣導短片</h2>
+<h4 style="padding-top:15px;">「友善校園」需要你我共同建立，隨時留意身邊的人、事、物，因為你的一個小小舉動，很有可能造成大大的影響，透過校園拍攝短片的宣導，協助觀看者瞭解參與各項體育活動時，應該注意的事項及相關法律常識，提供觀看者從事體育活動正確的態度及觀念；這是一個同一時間、不同地點，發生在校園裡的故事，請讓我們帶著好奇以及學習的心一起看下去吧！</h4>
+<br/>
           <ul class="home-events">
-            <li class="col-md-4 col-sm-6" tal:repeat="item view/docs">
+<tal:repeat repeat="item view/docs">
+            <li class="col-md-4 col-sm-6" tal:condition="python:'video' in item.Subject()">
               <div class="event-thumb">
                 <img tal:attributes="src string:${item/absolute_url}/@@images/image/preview;
                                      alt item/title">
@@ -40,7 +45,34 @@
                                      alt item/title; title item/description">觀看影片</a> </div>
               </div>
             </li>
+</tal:repeat>
           </ul>
+
+<hr>
+<h2>動畫專區</h2>
+<h4 style="padding-top:15px;">同儕之間常常因為亂取綽號，涉及別人的身體部位甚至性特徵，又或者使因為某種原因，在團體活動中遭到霸凌，如何杜絕並且避免類似事件發生，我們將用動畫簡單呈現故事情境，該如何正確預防、處理及面對，讓我們一起一探究竟吧！</h4>
+<br/>
+          <ul class="home-events">
+<tal:repeat repeat="item view/docs">
+            <li class="col-md-4 col-sm-6" tal:condition="python:'comic' in item.Subject()">
+              <div class="event-thumb">
+                <img tal:attributes="src string:${item/absolute_url}/@@images/image/preview;
+                                     alt item/title">
+                <div class="event-caption">
+                  <a class="youtube cboxElement"
+                     tal:attributes="href string:${item/text/raw}?autoplay=1;
+                                     alt item/title; title item/description">
+                    <h3 tal:content="item/title">Book Your Event</h3>
+                  </a><br/><br/>
+                  <p tal:content="item/description" style="font-size:1.5em"></p>
+                  <a class="youtube cboxElement book-now"
+                     tal:attributes="href string:${item/text/raw}?autoplay=1;
+                                     alt item/title; title item/description">觀看影片</a> </div>
+              </div>
+            </li>
+</tal:repeat>
+          </ul>
+
 
         </div>
       </div>
