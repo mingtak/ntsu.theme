@@ -23,12 +23,24 @@ portal = api.portal.get()
 
 
 
+
   <!--Main Content Start-->
   <div class="cp-page-content">
     <!--Home Latest News Start-->
     <div>
       <div class="container">
         <div class="row">
+
+<div class="col-md-12" tal:condition="python:context.id == 'ppt_slide'"
+     style="padding-bottom:25px">
+<a class="pull-right readmore-bg"
+   tal:attributes="href python:'%s/@@download/file/%s' %
+                                (portal['ebook']['ppt_file.pdf'].absolute_url(),
+                                 portal['ebook']['ppt_file.pdf'].file.filename)">投影片下載</a>
+</div>
+
+
+
           <div>
  
             <ul class="gallery-multi-col">
@@ -49,8 +61,6 @@ portal = api.portal.get()
     <!--Home Latest News End-->
   </div>
   <!--Main Content End-->
-
-
 
 
 </metal:main_macro>
