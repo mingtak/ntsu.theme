@@ -91,6 +91,10 @@ select {
     padding:10px 15px;
 }
 
+h2.tileHeadline {
+    font-size:20px;
+}
+
 /* font-family */
 .fonts {
         font-family: 'Courgette', cursive, 'Noto Sans TC';
