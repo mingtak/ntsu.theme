@@ -63,11 +63,11 @@ function loadApp() {
 			
 			// Magazine width
 
-			width: 1300,
+			width: 1000,
 
 			// Magazine height
 
-			height: 846,
+			height: 651,
 
 			// Duration in millisecond
 
