@@ -28,7 +28,7 @@ portal = api.portal.get()
           </div>
 
 
-          <div class="col-md-4">
+          <div class="col-md-3">
             <div class="widget_text">
               <h3>好站報報</h3>
 <p><a target="_blank" href="https://www.gender.edu.tw/web/index.php/home">教育部性別平等教育全球資訊網</a></p>
@@ -39,7 +39,7 @@ portal = api.portal.get()
           </div>
 
 
-          <div class="col-md-4">
+          <div class="col-md-3">
             <div class="widget_text">
               <h3>站內連結</h3>
 
@@ -48,11 +48,20 @@ portal = api.portal.get()
 <p><a tal:attributes="href python:'%s/album' % portal.absolute_url()">校園活動花絮</a></p>
 <p><a tal:attributes="href python:'%s/event' % portal.absolute_url()">好康活動獎不完！</a></p>
 
+            </div>
+          </div>
 
 
+
+          <div class="col-md-2">
+            <div class="widget_text">
+              <h3>二維條碼</h3>
+<p><img tal:attributes="src string:${portal/absolute_url}/resource/images/shutter_image_569.png/@@images/image/qrcode" /></p>
 
             </div>
           </div>
+
+
 
         </div>
       </div>

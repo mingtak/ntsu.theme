@@ -47,7 +47,7 @@ div.news-box {
 }
 
 .main-slider .caption.slide_2 {
-    top: 85%;
+    top: 80%;
 }
 
 .main-slider .caption.slide_3 {
@@ -113,6 +113,10 @@ tr.odd {
 
 .page404 {
     padding: 25px 0;
+}
+
+#parent-fieldname-text p {
+    font-size: 18px;
 }
 
 /* font-family */

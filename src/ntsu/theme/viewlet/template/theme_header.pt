@@ -10,7 +10,7 @@ portal = api.portal.get()
           <ul>
             <li><a tal:attributes="href python:'%s/@@download/file/%s' %
                                                (portal['ebook']['0620_60274fb55bb396325236.pdf'].absolute_url(),
-                                               portal['ebook']['0620_60274fb55bb396325236.pdf'].file.filename)">全文下載</a></li>
+                                               portal['ebook']['0620_60274fb55bb396325236.pdf'].file.filename)">防治手冊全文下載</a></li>
             <li><a tal:attributes="href python:'%s/@@download/file/%s' %
                                                (portal['ebook']['ppt_file.pdf'].absolute_url(),
                                                portal['ebook']['ppt_file.pdf'].file.filename)">投影片下載</a></li>
