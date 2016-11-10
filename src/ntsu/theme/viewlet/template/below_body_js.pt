@@ -452,6 +452,28 @@ yepnope({
   ga('create', 'UA-17370947-24', 'auto');
   ga('send', 'pageview');
 
+
+
+
+// 首頁活動翦影
+    $(document).ready(function() {
+
+      $(".cover-images-slider").owlCarousel({
+          stopOnHover: true,
+          pagination:false,
+          autoPlay: 3000, //Set AutoPlay to 3 seconds
+          items : 4,
+          itemsDesktop : [1199,3],
+          itemsDesktopSmall : [979,3]
+
+      });
+
+    });
+
+
+
+
+
 </script>
 
 </div>

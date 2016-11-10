@@ -45,12 +45,29 @@ portal = api.portal.get()
  
             <ul class="gallery-multi-col">
               <li class="col-md-3 col-sm-6" tal:repeat="item context/getChildNodes">
-                    <a tal:attributes="href string:${item/absolute_url}/@@images/image/large;
+                    <a tal:condition="python:item.Type() == 'Image'"
+                       tal:attributes="href string:${item/absolute_url}/@@images/image/large;
                                        data-title item/title"
                        data-lightbox="image-1">
-                  <img tal:attributes="src string:${item/absolute_url}/@@images/image/mini;
-                                       alt item/title" style="height:180px">
+                        <img tal:attributes="src string:${item/absolute_url}/@@images/image/preview;
+                                             alt item/title" style="height:auto;max-height:180px;width:100%; ">
                     </a>
+                    <a tal:condition="python:item.Type() == 'Folder'"
+                       tal:attributes="href item/absolute_url">
+                        <img tal:attributes="src string:${item/absolute_url}/@@images/image/preview;
+                                             alt item/title" style="height:auto;max-height:180px;width:100%; ">
+                    </a>
+
+<br>
+<a tal:condition="python:item.Type() == 'Image'"
+   tal:attributes="href string:${item/absolute_url}/@@download/image/${item/image/filename}"
+   tal:content="string:下載:${item/title}"/>
+
+<a tal:condition="python:item.Type() == 'Folder'"
+   tal:attributes="href item/absolute_url" 
+   tal:content="item/title"/>
+
+
               </li>
             </ul>
 

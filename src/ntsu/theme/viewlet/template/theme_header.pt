@@ -15,7 +15,7 @@ portal = api.portal.get()
                                                (portal['ebook']['ppt_file.pdf'].absolute_url(),
                                                portal['ebook']['ppt_file.pdf'].file.filename)">投影片下載</a></li>
             <li><a tal:attributes="href string:${portal/absolute_url}/event">好康活動</a></li>
-            <li><a href="https://www.facebook.com/1179273265525090" target="_blank">Facebook</a></li>
+<!--            <li><a href="https://www.facebook.com/1179273265525090" target="_blank">Facebook</a></li> -->
           </ul>
         </div>
       </div>
