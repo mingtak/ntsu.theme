@@ -1,5 +1,16 @@
 @import url(http://fonts.googleapis.com/earlyaccess/notosanstc.css);
 
+.event-caption h3 {
+    font-size: 1.2em;
+}
+
+.wrapper h2.sec-title {
+    padding: 0 0 0 10px;
+    font-size: 2.3em;
+    border-left: 5px solid #32aae1;
+    text-align: initial;
+}
+
 .page404 .p404 li.zero.thanks {
     background: url("http://event.ntsu.edu.tw/resource/images/right.png/@@images/image/mini") no-repeat center 15px #aaa;
 }

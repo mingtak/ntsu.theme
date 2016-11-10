@@ -29,10 +29,12 @@ portal = api.portal.get()
       <div class="container">
         <div class="row">
 
+<div class="col-md-4">
           <div class="col-md-12">
             <h2 class="sec-title">活動資訊</h2>
           </div>
-          <div class="col-md-4" tal:repeat="item brain">
+
+          <div class="col-md-12" tal:repeat="item brain">
             <div class="news-box">
               <div class="thumb"><img tal:attributes="src string:${item/getURL}/@@images/image/preview; alt item/Title"></div>
               <div class="news-caption">
@@ -42,6 +44,14 @@ portal = api.portal.get()
               </div>
             </div>
           </div>
+</div>
+
+<div class="col-md-8">
+          <div class="col-md-12">
+            <h2 class="sec-title">活動翦影</h2>
+          </div>
+
+</div>
 
 
 
@@ -71,7 +81,7 @@ portal = api.portal.get()
             <h2 class="sec-title">動畫 / 短片</h2>
           </div>
           <ul class="home-events">
-            <li class="col-md-4 col-sm-6" tal:repeat="item python:portal['media'].getChildNodes()">
+            <li class="col-md-3 col-sm-6" tal:repeat="item python:portal['media'].getChildNodes()">
               <div class="event-thumb">
                 <img tal:attributes="src string:${item/absolute_url}/@@images/image/preview;
                                        alt item/title">
@@ -80,8 +90,8 @@ portal = api.portal.get()
                      tal:attributes="href string:${item/text/raw}?autoplay=1;
                                      alt item/title; title item/description">
                     <h3 tal:content="item/title">Book Your Event</h3>
-                  </a><br/><br/>
-                  <p tal:content="item/description" style="font-size:1.5em"></p>
+                  </a>><br/>
+                  <p tal:content="item/description" style="font-size:1.1em"></p>
                   <a class="youtube cboxElement book-now"
                      tal:attributes="href string:${item/text/raw}?autoplay=1;
                                      alt item/title; title item/description">觀看影片</a> </div>
